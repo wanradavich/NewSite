@@ -35,13 +35,9 @@ nav {
 }
 
 main {
-  display: grid;
-  grid-template-columns: 3fr 1fr; /* First section takes 3/4, second section takes 1/4 */
 }
 
 section {
-  padding: 5px;
-  margin: 10px;
 }
 
 article {
