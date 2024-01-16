@@ -448,18 +448,37 @@ article {
   list-style: none;
 }
 
+.most-popular-feed-item-section {
+  color: rgb(197, 19, 19);
+  font-weight: bolder;
+}
+
+.most-popular-feed-item-index {
+  color: white;
+  background-color: black;
+  padding: 10px;
+
+  font-size: 14px;
+  margin-right: 5px;
+}
+
 /* Desktop Styles (768px and above) */
 @media screen and (min-width: 768px) {
+  .fig-credit {
+    font-size: 18px;
+    margin-top: 0;
+  }
+
   .feature > .slide > .headline {
-    width: 700px;
+    width: 1100px;
   }
 
   .feature > .slide > .image-container > a > img {
-    width: 750px;
+    width: 1440px;
   }
 
   .secondary > .slide > .image-container > a > img {
-    width: 200px;
+    width: 350px;
     height: auto;
   }
 
@@ -470,13 +489,13 @@ article {
   }
 
   .featured-section {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
   }
 
   .secondary > .slide > .headline {
     font-size: 15px;
-    width: 200px;
+    width: 355px;
   }
 
   .secondary {
@@ -506,57 +525,62 @@ article {
   .most-popular-feed-item-section {
     font-size: 14px;
   }
+
+  .most-popular-feed-item {
+    padding-left: 0;
+  }
 }
+
 /* Hamburger Nav Bar Styling  */
 .hamburger {
-	display: block;
+  display: block;
 }
 /* Styling for menu icon */
 .bar {
-	display: block;
-	width: 25px;
-	height: 3px;
-	margin: 5px;
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
   margin-left: 20px;
-	background-color: rgb(40, 40, 40);
-	-webkit-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
+  background-color: rgb(40, 40, 40);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 /*  Transformation for the 3 lines to turn into an x */
 .hamburger.active .bar:nth-child(2) {
-	opacity: 0;
+  opacity: 0;
 }
 .hamburger.active .bar:nth-child(1) {
-	transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 .hamburger.active .bar:nth-child(3) {
-	transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
 /* Styling for the nav menu */
 .nav-menu {
-	position: fixed;
-	left: -100%;
-	top: 151px;
-	height: 400px;
-	gap: 0;
+  position: fixed;
+  left: -100%;
+  top: 151px;
+  height: 400px;
+  gap: 0;
   display: flex;
   flex-wrap: wrap;
-	flex-direction: column;
+  flex-direction: column;
   align-items: flex-start;
-	width: 80%;
-	text-align: center;
-	transition: 0.5s;
+  width: 80%;
+  text-align: center;
+  transition: 0.5s;
   border: 1px solid #dcdcdc;
 }
 li {
-	padding: 10px;
+  padding: 10px;
 }
 .nav-menu.active {
-	left: 0;
-	background-color: white;
+  left: 0;
+  background-color: white;
 }
 .nav-buttons {
-  padding: 20px
+  padding: 20px;
 }
 #sign-in {
   background-color: black;
@@ -578,8 +602,7 @@ li {
   text-align: center;
 }
 ul {
-  padding-inline-start: 10px
+  padding-inline-start: 10px;
 }
-
 
 /* End Hamburger Nav Bar Styling */
