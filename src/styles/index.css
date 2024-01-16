@@ -11,7 +11,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #9b9797;
+  background-color: rgb(180, 41, 41);
   color: #fff;
   padding: 10px;
   text-align: center;
@@ -32,6 +32,58 @@ nav {
   color: #fff;
   padding: 10px;
   text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+article {
+  margin-bottom: 30px;
+}
+
+/* top section */
+.image-container {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.feature > .slide > .image-container > a > img {
+  width: 425px;
+  height: auto;
+}
+
+.feature > .slide > .headline {
+  background-color: black;
+  color: white;
+}
+
+.feature-title {
+  color: white;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.fig-credit {
+  font-size: 12px;
+}
+
+.headline {
+  padding: 15px;
+  margin: 0;
+}
+
+.secondary > .slide > .headline {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+.secondary > .slide > .image-container > a > img {
+  width: 425px;
+  height: auto;
 }
 
 /* DESKTOP REF LAYOUT */
