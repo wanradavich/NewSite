@@ -350,6 +350,43 @@ a {
   
 }
 
+@media screen and (min-width: 1162px) {
+  .mobile-carousel .swiper-container.you-should-know-carousel .swiper-wrapper .swiper-slide {
+    width: auto;
+    height: auto;
+    border: none;
+    padding: 0;
+  }
+
+  .you-should-know-tablet {
+    background: none;
+  }
+
+  .you-should-know-tablet::before,
+  .you-should-know-tablet::after {
+    display: none;
+  }
+
+  .you-should-know-tablet-content {
+    flex-wrap: nowrap;
+    padding: 0;
+  }
+
+  .you-should-know-tablet-content article {
+    margin-right: 0;
+  }
+
+  .you-should-know-carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .you-should-know-chevron-left,
+  .you-should-know-chevron-right {
+    display: none; /* Hide chevrons on screens above 1162px */
+  }
+}
 
 article {
   margin-bottom: 30px;
