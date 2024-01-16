@@ -42,6 +42,9 @@ nav {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  width: 100%;
+  max-width: 1440px; /* Adjust as needed */
+  margin: 0 auto; /* Center the container horizontally */
 }
 
 .homepage-wrapper {
@@ -351,13 +354,14 @@ a {
 }
 
 @media screen and (min-width: 1162px) {
-  .mobile-carousel .swiper-container.you-should-know-carousel .swiper-wrapper .swiper-slide {
-    width: auto;
-    height: auto;
-    border: none;
-    padding: 0;
-  }
 
+  .mobile-carousel .swiper-container.you-should-know-carousel .swiper-wrapper .swiper-slide {
+    width: 200px; /* Set the width as needed */
+    height: 420px; /* Set the height as needed */
+    border: 1px solid #ccc; /* Border color */
+    box-sizing: border-box; /* Include border in the width and height */
+    padding: 10px; /* Optional padding for each article */
+  }
   .you-should-know-tablet {
     background: none;
   }
