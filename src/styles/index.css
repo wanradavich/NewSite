@@ -1,4 +1,7 @@
-*,:after,:before,html {
+*,
+:after,
+:before,
+html {
   box-sizing: border-box;
 }
 
@@ -36,6 +39,10 @@ nav {
   color: #fff;
   padding: 10px;
   text-align: center;
+}
+
+li {
+  list-style: none;
 }
 
 .homepage-wrapper {
@@ -92,7 +99,7 @@ nav {
   justify-content: center;
 }
 
-.mobile-carousel .item-selectors nav input:checked+label {
+.mobile-carousel .item-selectors nav input:checked + label {
   background: yellow;
 }
 
@@ -108,7 +115,7 @@ nav {
   overflow: hidden;
 }
 
-.mobile-carousel .item-selectors nav input[type=radio] {
+.mobile-carousel .item-selectors nav input[type="radio"] {
   display: none;
 }
 
@@ -123,19 +130,28 @@ nav {
     display: none;
   }
 
-  .mobile-carousel .swiper-container.you-should-know-carousel .swiper-wrapper .swiper-slide {
+  .mobile-carousel
+    .swiper-container.you-should-know-carousel
+    .swiper-wrapper
+    .swiper-slide {
     width: 280px; /* Set the width as needed */
     height: 420px; /* Set the height as needed */
     border: 1px solid #ccc; /* Border color */
     box-sizing: border-box; /* Include border in the width and height */
     padding: 10px; /* Optional padding for each article */
   }
-  
+
   .you-should-know-tablet {
     position: relative;
     height: 100%;
     overflow: hidden;
-    background: linear-gradient(to right, #fff, transparent 10%, transparent 90%, #fff);
+    background: linear-gradient(
+      to right,
+      #fff,
+      transparent 10%,
+      transparent 90%,
+      #fff
+    );
   }
 
   .you-should-know-tablet::before,
@@ -171,12 +187,12 @@ nav {
   .you-should-know-carousel {
     position: relative;
   }
-  
+
   .you-should-know-chevron-left,
   .you-should-know-chevron-right {
     position: absolute;
     width: 40px;
-    height:40px;
+    height: 40px;
     border-radius: 100%;
     top: 50%;
     transform: translateY(-50%);
@@ -189,17 +205,15 @@ nav {
     align-items: center;
     z-index: 1000;
   }
-  
+
   .you-should-know-chevron-left {
     left: 10px;
   }
-  
+
   .you-should-know-chevron-right {
     right: 10px;
   }
-  
 }
-
 
 a {
   text-decoration: none;
@@ -245,7 +259,7 @@ a {
   justify-content: center;
 }
 
-.mobile-carousel .item-selectors nav input:checked+label {
+.mobile-carousel .item-selectors nav input:checked + label {
   background: yellow;
 }
 
@@ -261,7 +275,7 @@ a {
   overflow: hidden;
 }
 
-.mobile-carousel .item-selectors nav input[type=radio] {
+.mobile-carousel .item-selectors nav input[type="radio"] {
   display: none;
 }
 
@@ -276,19 +290,28 @@ a {
     display: none;
   }
 
-  .mobile-carousel .swiper-container.you-should-know-carousel .swiper-wrapper .swiper-slide {
+  .mobile-carousel
+    .swiper-container.you-should-know-carousel
+    .swiper-wrapper
+    .swiper-slide {
     width: 280px; /* Set the width as needed */
     height: 420px; /* Set the height as needed */
     border: 1px solid #ccc; /* Border color */
     box-sizing: border-box; /* Include border in the width and height */
     padding: 10px; /* Optional padding for each article */
   }
-  
+
   .you-should-know-tablet {
     position: relative;
     height: 100%;
     overflow: hidden;
-    background: linear-gradient(to right, #fff, transparent 10%, transparent 90%, #fff);
+    background: linear-gradient(
+      to right,
+      #fff,
+      transparent 10%,
+      transparent 90%,
+      #fff
+    );
   }
 
   .you-should-know-tablet::before,
@@ -324,12 +347,12 @@ a {
   .you-should-know-carousel {
     position: relative;
   }
-  
+
   .you-should-know-chevron-left,
   .you-should-know-chevron-right {
     position: absolute;
     width: 40px;
-    height:40px;
+    height: 40px;
     border-radius: 100%;
     top: 50%;
     transform: translateY(-50%);
@@ -342,20 +365,21 @@ a {
     align-items: center;
     z-index: 1000;
   }
-  
+
   .you-should-know-chevron-left {
     left: 10px;
   }
-  
+
   .you-should-know-chevron-right {
     right: 10px;
   }
-  
 }
 
 @media screen and (min-width: 1162px) {
-
-  .mobile-carousel .swiper-container.you-should-know-carousel .swiper-wrapper .swiper-slide {
+  .mobile-carousel
+    .swiper-container.you-should-know-carousel
+    .swiper-wrapper
+    .swiper-slide {
     width: 200px; /* Set the width as needed */
     height: 420px; /* Set the height as needed */
     border: 1px solid #ccc; /* Border color */
@@ -462,6 +486,16 @@ article {
   margin-right: 5px;
 }
 
+/* featured voices */
+.featured-voices-list-item > img {
+  width: 400px;
+  height: auto;
+}
+
+.latest-stories-heading {
+  margin-left: 20px;
+}
+
 /* Desktop Styles (768px and above) */
 @media screen and (min-width: 768px) {
   .fig-credit {
@@ -529,8 +563,94 @@ article {
   .most-popular-feed-item {
     padding-left: 0;
   }
+
+  /* featured voices */
+  .featured-voices-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .featured-voices-list-item > p {
+    width: 250px;
+    font-size: 20px;
+  }
+
+  .featured-voices-list-item-headline {
+    font-size: 20px;
+    width: 230px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .featured-voices-list-item-author {
+    margin-top: 5px;
+  }
+
+  .featured-voices-list-item-author > a {
+    color: rgb(208, 12, 12);
+    font-size: 16px;
+  }
+
+  .featured-voices-list-item > img {
+    width: 250px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .expanded {
+    max-height: none;
+  }
+
+  .featured-voices-heading {
+    font-size: 30px;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .voices-ls {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-top: 50px;
+    padding: 20px;
+  }
+
+  .voices-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* latest stories */
+  .latest-stories-heading {
+    margin-left: 18px;
+    font-size: 22px;
+  }
+
+  .latest-stories-item-headline {
+    color: white;
+  }
+
+  .latest-stories-item-headline::before {
+    content: "\2192"; /* Unicode arrow character */
+    display: inline-block;
+    margin-right: 5px;
+    color: rgb(180, 41, 41);
+  }
+
+  .latest-stories {
+    background-color: black;
+    color: white;
+    padding: 20px;
+  }
+  .latest-stories-heading {
+    font-size: 25px;
+  }
 }
 
+/* featured-voices */
+.latest-stories {
+  list-style: none;
+}
 /* Hamburger Nav Bar Styling  */
 .hamburger {
   display: block;
