@@ -2,15 +2,9 @@ body {
   font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: white;
   display: grid;
   min-height: 100vh;
-}
-
-#header-logo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
 }
 
 header {
@@ -21,6 +15,12 @@ header {
   color: #fff;
   padding: 10px;
   text-align: center;
+}
+
+#header-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 #header-title {
@@ -34,21 +34,24 @@ nav {
   text-align: center;
 }
 
-main {
+/* DESKTOP REF LAYOUT */
+/* .featured-section {
+  display: flex;
+  justify-content: space-between;
 }
 
-section {
+.feature {
+  flex: 0 0 calc(33.33% - 20px); 
 }
 
-article {
-  background-color: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 5px;
+.secondary {
+  flex: 0 0 calc(46.66% - 20px); 
 }
 
-footer {
-  color: #000000;
-  padding: 10px;
-  text-align: center;
+.feature .slide img {
+  max-width: 100%;
 }
+
+.most-popular-feed-wrapper {
+  max-width: 100%; 
+} */
