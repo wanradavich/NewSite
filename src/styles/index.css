@@ -3,7 +3,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: white;
-  display: grid;
   min-height: 100vh;
 }
 
@@ -172,7 +171,12 @@ article {
   .most-popular-feed-item-section {
     font-size: 14px;
   }
+
+  .most-popular-feed-item {
+    padding-left: 0;
+  }
 }
+
 /* Hamburger Nav Bar Styling  */
 .hamburger {
   display: block;
