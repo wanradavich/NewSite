@@ -52,3 +52,79 @@ footer {
   padding: 10px;
   text-align: center;
 }
+/* Hamburger Nav Bar Styling  */
+.hamburger {
+	display: block;
+}
+/* Styling for menu icon */
+.bar {
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px;
+  margin-left: 20px;
+	background-color: rgb(40, 40, 40);
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+/*  Transformation for the 3 lines to turn into an x */
+.hamburger.active .bar:nth-child(2) {
+	opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+	transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+	transform: translateY(-8px) rotate(-45deg);
+}
+/* Styling for the nav menu */
+.nav-menu {
+	position: fixed;
+	left: -100%;
+	top: 151px;
+	height: 400px;
+	gap: 0;
+  display: flex;
+  flex-wrap: wrap;
+	flex-direction: column;
+  align-items: flex-start;
+	width: 80%;
+	text-align: center;
+	transition: 0.5s;
+  border: 1px solid #dcdcdc;
+}
+li {
+	padding: 10px;
+}
+.nav-menu.active {
+	left: 0;
+	background-color: white;
+}
+.nav-buttons {
+  padding: 20px
+}
+#sign-in {
+  background-color: black;
+  color: white;
+}
+#subscribe {
+  background-color: rgb(217, 69, 61);
+  color: white;
+}
+.nav-buttons > button {
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+  font-size: 14xpx;
+  font-weight: bold;
+  cursor: pointer;
+  height: 32px;
+  width: 115px;
+  text-align: center;
+}
+ul {
+  padding-inline-start: 10px
+}
+
+
+/* End Hamburger Nav Bar Styling */
