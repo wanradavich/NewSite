@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./styles/index.css" />
     <title>Document</title>
   </head>
@@ -146,7 +150,56 @@
       </section>
       <section class="homepage-section you-should-know">
         <h2 class="section-heading">You Should Know</h2>
-        <div class="partial you-should-know"></div>
+        <div class="partial mobile-carousel you-should-know">
+          <div class="item-selectors">
+            <form id="carouselSelectorForm">
+              <nav>
+                <input id ="ysk-carousel-item-1" type="radio" name="itemCarouselSelector" value="1" checked/>
+                <label for="ysk-carousel-item-1"></label>
+                <input id ="ysk-carousel-item-2" type="radio" name="itemCarouselSelector" value="2" />
+                <label for="ysk-carousel-item-2"></label>
+                <input id ="ysk-carousel-item-3" type="radio" name="itemCarouselSelector" value="3" />
+                <label for="ysk-carousel-item-3"></label>
+                <input id ="ysk-carousel-item-4" type="radio" name="itemCarouselSelector" value="4" />
+                <label for="ysk-carousel-item-4"></label>
+                <input id ="ysk-carousel-item-5" type="radio" name="itemCarouselSelector" value="5" />
+                <label for="ysk-carousel-item-5"></label>
+              </nav>
+            </form>
+          </div>
+
+          <div class="swiper-container you-should-know-carousel">
+            <div class="swiper-wrapper">
+              <!-- Add your carousel items here -->
+              <div class="swiper-slide">
+                <h3>Topic 1</h3>
+                <p>Details about Topic 1</p>
+              </div>
+              <div class="swiper-slide">
+                <h3>Topic 2</h3>
+                <p>Details about Topic 2</p>
+              </div>
+              <div class="swiper-slide">
+                <h3>Topic 3</h3>
+                <p>Details about Topic 3</p>
+              </div>
+              <div class="swiper-slide">
+                <h3>Topic 4</h3>
+                <p>Details about Topic 4</p>
+              </div>
+              <div class="swiper-slide">
+                <h3>Topic 5</h3>
+                <p>Details about Topic 5</p>
+              </div>
+              <!-- Add more slides as needed -->
+            </div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
       </section>
       <section class="homepage-section editors-picks">
         <div class="editors-picks-wrapper">
@@ -170,9 +223,7 @@
           </div>
           <div class="component homepage-video-player">
             <div class="player">
-              <div class="video-container">
-
-              </div>
+              <div class="video-container"></div>
               <div class="video-info">
                 <div class="info-left">
                   <h3 class="title">PIECE School of the Year 2023 | BCIT</h3>
@@ -189,9 +240,7 @@
               </div>
               <div class="playlist">
                 <h3 class="heading">Watch Next</h3>
-                <div class="videos-well">
-
-                </div>
+                <div class="videos-well"></div>
               </div>
             </div>
           </div>
@@ -344,6 +393,7 @@
     <footer>
       <p>&copy; 2024 Eunice, Everest, Pat, Sydnee - All rights reserved.</p>
     </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
