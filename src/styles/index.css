@@ -36,7 +36,7 @@ header {
 }
 
 nav {
-  color: #fff;
+  color: black;
   padding: 10px;
   text-align: center;
 }
@@ -429,6 +429,7 @@ article {
 .feature > .slide > .image-container > a > img {
   width: 425px;
   height: auto;
+  max-width: 100%;
 }
 
 .feature > .slide > .headline {
@@ -475,15 +476,20 @@ article {
 .most-popular-feed-item-section {
   color: rgb(197, 19, 19);
   font-weight: bolder;
+  font-size: 20px;
 }
 
 .most-popular-feed-item-index {
   color: white;
   background-color: black;
   padding: 10px;
-
+  margin-bottom: px;
   font-size: 14px;
   margin-right: 5px;
+}
+
+.most-popular-feed-item {
+  line-height: 50px;
 }
 
 /* featured voices */
@@ -501,6 +507,13 @@ article {
   list-style: none;
 }
 
+@media screen and (min-width: 1024px) {
+  .feature-flex {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
 /* Desktop Styles (768px and above) */
 @media screen and (min-width: 768px) {
   .fig-credit {
@@ -512,7 +525,7 @@ article {
     width: 1100px;
   }
 
-  .feature > .slide > .image-container > a > img {
+  #feature-img {
     width: 1440px;
   }
 
@@ -722,19 +735,21 @@ article {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
-  width: 80%;
+  /* width: 80%; */
   text-align: center;
   transition: 0.5s;
-  border: 1px solid #dcdcdc;
+  /* border: 1px solid #dcdcdc; */
 }
 li {
   padding: 10px;
 }
 .nav-menu.active {
+  margin-top: 5px;
   left: 0;
   background-color: white;
 }
 .nav-buttons {
+  margin-top: 40px;
   padding: 20px;
 }
 #sign-in {
@@ -749,10 +764,10 @@ li {
   padding: 10px;
   border-radius: 3px;
   border: none;
-  font-size: 14xpx;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
-  height: 32px;
+  /* height: 32px; */
   width: 115px;
   text-align: center;
 }
