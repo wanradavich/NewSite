@@ -486,6 +486,16 @@ article {
   margin-right: 5px;
 }
 
+/* featured voices */
+.featured-voices-list-item > img {
+  width: 400px;
+  height: auto;
+}
+
+.latest-stories-heading {
+  margin-left: 20px;
+}
+
 /* Desktop Styles (768px and above) */
 @media screen and (min-width: 768px) {
   .fig-credit {
