@@ -6,25 +6,25 @@ body {
   font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: white;
   display: block;
   min-height: 100vh;
-}
-
-#header-logo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
 }
 
 header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #9b9797;
+  background-color: rgb(180, 41, 41);
   color: #fff;
   padding: 10px;
   text-align: center;
+}
+
+#header-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 #header-title {
@@ -44,10 +44,163 @@ nav {
   overflow: hidden;
 }
 
-main {
+.homepage-wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-section {
+/* Add your general styling here */
+
+.mobile-carousel .item-selectors nav {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.you-should-know-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  padding: 20px;
+}
+
+.item-selectors {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ... (previous styles) */
+
+.item-selectors {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#carouselSelectorForm {
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-carousel .item-selectors nav input:checked+label {
+  background: yellow;
+}
+
+.mobile-carousel .item-selectors nav label {
+  background: red;
+  border-radius: 100%;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin: 0 0.5rem;
+  overflow: hidden;
+}
+
+.mobile-carousel .item-selectors nav input[type=radio] {
+  display: none;
+}
+
+.you-should-know-chevron-left,
+.you-should-know-chevron-right {
+  display: none; /* Hide the buttons */
+}
+
+/* Tablet view (768px and above) */
+@media screen and (min-width: 768px) {
+  .mobile-carousel .item-selectors nav {
+    display: none;
+  }
+
+  .mobile-carousel .swiper-container.you-should-know-carousel .swiper-wrapper .swiper-slide {
+    width: 280px; /* Set the width as needed */
+    height: 420px; /* Set the height as needed */
+    border: 1px solid #ccc; /* Border color */
+    box-sizing: border-box; /* Include border in the width and height */
+    padding: 10px; /* Optional padding for each article */
+  }
+  
+  .you-should-know-tablet {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(to right, #fff, transparent 10%, transparent 90%, #fff);
+  }
+
+  .you-should-know-tablet::before,
+  .you-should-know-tablet::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(to right, #fff, transparent);
+  }
+
+  .you-should-know-tablet::before {
+    left: 0;
+  }
+
+  .you-should-know-tablet::after {
+    right: 0;
+    background: linear-gradient(to right, transparent, #fff);
+  }
+
+  .you-should-know-tablet-content {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px; /* Adjust as needed */
+  }
+
+  .you-should-know-tablet-content article {
+    /* Your styles for each article */
+    margin-right: 20px; /* Adjust as needed */
+  }
+
+  .you-should-know-carousel {
+    position: relative;
+  }
+  
+  .you-should-know-chevron-left,
+  .you-should-know-chevron-right {
+    position: absolute;
+    width: 40px;
+    height:40px;
+    border-radius: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: white; /* Adjust as needed */
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .you-should-know-chevron-left {
+    left: 10px;
+  }
+  
+  .you-should-know-chevron-right {
+    right: 10px;
+  }
+  
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 /* Add your general styling here */
@@ -199,14 +352,193 @@ section {
 
 
 article {
-  background-color: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 5px;
+  margin-bottom: 30px;
 }
 
-footer {
-  color: #000000;
+/* top section */
+.image-container {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.feature > .slide > .image-container > a > img {
+  width: 425px;
+  height: auto;
+}
+
+.feature > .slide > .headline {
+  background-color: black;
+  color: white;
+}
+
+.feature-title {
+  color: rgb(255, 230, 146);
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.fig-credit {
+  font-size: 12px;
+}
+
+.headline {
+  padding: 15px;
+  margin: 0;
+}
+
+.secondary-title {
+  font-weight: bolder;
+}
+
+.secondary > .slide > .headline {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.secondary > .slide > .image-container > a > img {
+  width: 425px;
+  height: auto;
+}
+
+.most-popular-feed-item-container {
+  list-style: none;
+}
+
+/* Desktop Styles (768px and above) */
+@media screen and (min-width: 768px) {
+  .feature > .slide > .headline {
+    width: 700px;
+  }
+
+  .feature > .slide > .image-container > a > img {
+    width: 750px;
+  }
+
+  .secondary > .slide > .image-container > a > img {
+    width: 200px;
+    height: auto;
+  }
+
+  .feature-flex {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+
+  .featured-section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .secondary > .slide > .headline {
+    font-size: 15px;
+    width: 200px;
+  }
+
+  .secondary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .feature {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature .slide img {
+    max-width: 100%;
+  }
+
+  .most-popular-feed-wrapper {
+    max-width: 100%;
+  }
+
+  .most-popular-feed-head {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .most-popular-feed-item-section {
+    font-size: 14px;
+  }
+}
+/* Hamburger Nav Bar Styling  */
+.hamburger {
+	display: block;
+}
+/* Styling for menu icon */
+.bar {
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px;
+  margin-left: 20px;
+	background-color: rgb(40, 40, 40);
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+/*  Transformation for the 3 lines to turn into an x */
+.hamburger.active .bar:nth-child(2) {
+	opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+	transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+	transform: translateY(-8px) rotate(-45deg);
+}
+/* Styling for the nav menu */
+.nav-menu {
+	position: fixed;
+	left: -100%;
+	top: 151px;
+	height: 400px;
+	gap: 0;
+  display: flex;
+  flex-wrap: wrap;
+	flex-direction: column;
+  align-items: flex-start;
+	width: 80%;
+	text-align: center;
+	transition: 0.5s;
+  border: 1px solid #dcdcdc;
+}
+li {
+	padding: 10px;
+}
+.nav-menu.active {
+	left: 0;
+	background-color: white;
+}
+.nav-buttons {
+  padding: 20px
+}
+#sign-in {
+  background-color: black;
+  color: white;
+}
+#subscribe {
+  background-color: rgb(217, 69, 61);
+  color: white;
+}
+.nav-buttons > button {
   padding: 10px;
+  border-radius: 3px;
+  border: none;
+  font-size: 14xpx;
+  font-weight: bold;
+  cursor: pointer;
+  height: 32px;
+  width: 115px;
   text-align: center;
 }
+ul {
+  padding-inline-start: 10px
+}
+
+
+/* End Hamburger Nav Bar Styling */
