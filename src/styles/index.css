@@ -429,6 +429,7 @@ article {
 .feature > .slide > .image-container > a > img {
   width: 425px;
   height: auto;
+  max-width: 100%;
 }
 
 .feature > .slide > .headline {
@@ -475,15 +476,20 @@ article {
 .most-popular-feed-item-section {
   color: rgb(197, 19, 19);
   font-weight: bolder;
+  font-size: 20px;
 }
 
 .most-popular-feed-item-index {
   color: white;
   background-color: black;
   padding: 10px;
-
+  margin-bottom: px;
   font-size: 14px;
   margin-right: 5px;
+}
+
+.most-popular-feed-item {
+  line-height: 50px;
 }
 
 /* featured voices */
