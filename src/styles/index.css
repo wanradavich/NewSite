@@ -492,8 +492,13 @@ article {
   height: auto;
 }
 
+/* latest stories */
 .latest-stories-heading {
   margin-left: 20px;
+}
+
+.latest-stories {
+  list-style: none;
 }
 
 /* Desktop Styles (768px and above) */
@@ -647,10 +652,40 @@ article {
   }
 }
 
-/* featured-voices */
-.latest-stories {
-  list-style: none;
+/* subscribe */
+.mag-subs-item-list > li::before {
+  content: "\2B50"; /* Unicode code point for the bell */
+  font-family: "Arial", sans-serif;
+  font-size: 15px;
+  margin-right: 10px;
 }
+
+.mag-subs-inner {
+  font-size: 18px;
+}
+
+.mag-subs-inner > .content {
+  margin-top: 25px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.btn {
+  color: white;
+  font-size: 18px;
+}
+
+.subscribe-desc {
+  font-size: 20px;
+}
+
+.mag-subs {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+}
+
 /* Hamburger Nav Bar Styling  */
 .hamburger {
   display: block;
