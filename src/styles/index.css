@@ -111,16 +111,21 @@ article {
 
 /* Desktop Styles (768px and above) */
 @media screen and (min-width: 768px) {
+  .fig-credit {
+    font-size: 18px;
+    margin-top: 0;
+  }
+
   .feature > .slide > .headline {
-    width: 700px;
+    width: 1100px;
   }
 
   .feature > .slide > .image-container > a > img {
-    width: 750px;
+    width: 1440px;
   }
 
   .secondary > .slide > .image-container > a > img {
-    width: 200px;
+    width: 350px;
     height: auto;
   }
 
@@ -131,13 +136,13 @@ article {
   }
 
   .featured-section {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
   }
 
   .secondary > .slide > .headline {
     font-size: 15px;
-    width: 200px;
+    width: 355px;
   }
 
   .secondary {
