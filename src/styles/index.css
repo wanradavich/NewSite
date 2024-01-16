@@ -109,31 +109,9 @@ section {
   display: none;
 }
 
-/* Customize Navigation Buttons */
-.swiper-button-next, .swiper-button-prev {
-  color: #fff;
-  font-size: 18px;
-}
-
-/* Customize Pagination */
-.swiper-pagination {
-  position: absolute;
-  bottom: 10px;
-  text-align: center;
-  width: 100%;
-}
-
-.swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
-  background-color: #fff;
-  opacity: 0.7;
-  margin: 0 8px;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #fff;
-  opacity: 1;
+.you-should-know-chevron-left,
+.you-should-know-chevron-right {
+  display: none; /* Hide the buttons */
 }
 
 /* Tablet view (768px and above) */
@@ -187,23 +165,36 @@ section {
     margin-right: 20px; /* Adjust as needed */
   }
 
+  .you-should-know-carousel {
+    position: relative;
+  }
+  
   .you-should-know-chevron-left,
   .you-should-know-chevron-right {
     position: absolute;
+    width: 40px;
+    height:40px;
+    border-radius: 100%;
     top: 50%;
     transform: translateY(-50%);
     font-size: 24px;
     cursor: pointer;
-    color: #333; /* Adjust as needed */
+    color: white; /* Adjust as needed */
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
   }
-
+  
   .you-should-know-chevron-left {
     left: 10px;
   }
-
+  
   .you-should-know-chevron-right {
     right: 10px;
   }
+  
 }
 
 
