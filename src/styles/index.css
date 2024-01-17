@@ -828,6 +828,8 @@ article {
 .mag-subs-inner > .content {
   margin-bottom: 30px;
   text-align: center;
+  padding: 20px;
+  font-size: 18px;
 }
 
 #sub-btn {
@@ -863,17 +865,25 @@ article {
   .mag-subs-inner > .content {
     margin-top: 30px;
     margin: 0 auto;
+    font-size: 18px;
   }
 
   #subscribe-img {
-    width: 360px;
-    height: 360px;
+    width: 400px;
+    height: 400px;
     margin-left: 15px;
   }
 
   .mag-subs-item-list {
     margin-bottom: 40px;
     margin-left: 40px;
+    font-size: 15px;
+  }
+
+  .subscribe-desc {
+    padding: 40px;
+    padding-bottom: 0;
+    font-size: 15px;
   }
 }
 
