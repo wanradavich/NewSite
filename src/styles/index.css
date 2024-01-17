@@ -57,11 +57,20 @@ li {
 
 .homepage-section {
   width: 100%;
+  padding-top: 2rem;
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+.section-heading {
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Swiper + Carousel styling here */
@@ -733,6 +742,7 @@ ul {
 /* Tablet view (768px and above) */
 @media screen and (min-width: 768px) {
   /* Swiper Sections*/
+
   .mobile-carousel .item-selectors nav {
     display: none;
   }
@@ -753,16 +763,18 @@ ul {
     color: #fff; /* Text color on the image */
     margin: 0; /* Remove default margins */
     z-index: 2;
-    font-weight: 900;
+    font-weight: 700;
+    font-size: 15px;
   }
 
   .swiper-slide p {
     position: absolute;
-    bottom: 40px; /* Adjust the distance from the bottom as needed */
+    bottom: 20px; /* Adjust the distance from the bottom as needed */
     left: 30px; /* Adjust the distance from the left as needed */
     color: #fff; /* Text color on the image */
     margin: 0; /* Remove default margins */
     z-index: 2;
+    font-size: 10px;
   }
 
   .you-should-know-tablet {
@@ -968,27 +980,49 @@ ul {
     .swiper-container.you-should-know-carousel
     .swiper-wrapper
     .swiper-slide {
-    width: 200px; /* Set the width as needed */
-    height: 300px; /* Set the height as needed */
+    width: calc((100% - 40px) / 5); /* Set the width as needed */
+    height: 100%; /* Set the height as needed */
     box-sizing: border-box; /* Include border in the width and height */
+  }
+
+  .swiper-container {
+    width: 100%;
+    max-width: 1440px;
+  }
+
+  .swiper-wrapper {
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between; /* or any other value like space-around or space-evenly */
+    align-items: center; /* optional: align items in the center */
+  }
+
+  .mobile-carousel .swiper-container.you-should-know-carousel {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto; /* Center the container horizontally */
+    overflow: hidden; /* Ensure the container doesn't overflow */
   }
 
   .swiper-slide h3 {
     position: absolute;
-    bottom: 60px; /* Adjust the distance from the bottom as needed */
-    left: 30px; /* Adjust the distance from the left as needed */
+    bottom: 50px; /* Adjust the distance from the bottom as needed */
+    left: 20px; /* Adjust the distance from the left as needed */
     color: #fff; /* Text color on the image */
     margin: 0; /* Remove default margins */
     z-index: 2;
-    font-weight: 900;
+    font-weight: 700;
+    font-size: 0.7rem;
   }
 
   .swiper-slide p {
     position: absolute;
-    bottom: 40px; /* Adjust the distance from the bottom as needed */
-    left: 30px; /* Adjust the distance from the left as needed */
+    bottom: 20px; /* Adjust the distance from the bottom as needed */
+    left: 20px; /* Adjust the distance from the left as needed */
     color: #fff; /* Text color on the image */
     margin: 0; /* Remove default margins */
+    font-weight: 400;
+    font-size: 0.5rem;
     z-index: 2;
   }
 

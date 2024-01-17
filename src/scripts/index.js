@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initialize Swiper
     var swiper = new Swiper('.you-should-know-carousel', {
         slidesPerView: 'auto',
-        spaceBetween: 20,
+        spaceBetween: 10,
         navigation: {
             nextEl: '.you-should-know-chevron-right',
             prevEl: '.you-should-know-chevron-left',
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
             swiper.slideTo(selectedValue - 1); // Swiper uses zero-based index
         }
     });
-
+/*
     // Disable swiping for screens larger than 1162px
     function toggleSwiping() {
         var shouldDisableSwiping = window.innerWidth > 1162;
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleSwiping();
 
     // Listen for window resize events to update swiping state
-    window.addEventListener('resize', toggleSwiping);
+    window.addEventListener('resize', toggleSwiping);*/
 });
 searchbarIcon.addEventListener("click", () => {
   searchbar.classList.toggle("active");
