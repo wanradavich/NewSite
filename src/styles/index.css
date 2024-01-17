@@ -745,8 +745,8 @@ ul {
   margin: 0 10px;
 }
 .footer-nav {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
@@ -1192,5 +1192,13 @@ ul {
 
   .latest-stories-item-headline {
     font-size: 23px;
+  }
+  /* searchbar styling */
+  .searchbar-container svg {
+    height: 18px;
+    width: 18px;
+  }
+  .searchbar-container > label {
+    width: 24px;
   }
 }
