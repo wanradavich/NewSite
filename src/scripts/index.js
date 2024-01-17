@@ -27,10 +27,11 @@ document.addEventListener('DOMContentLoaded', function () {
             nextEl: '.you-should-know-chevron-right',
             prevEl: '.you-should-know-chevron-left',
         },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
+        breakpoints: {
+            1162: {
+              slidesPerView: 'auto', // Display as many slides as possible without swiping
+            },
+        }
     });
 
     // Add event listener to the form to change the active slide
@@ -63,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Disable swiping for screens larger than 1162px
     function toggleSwiping() {
-        var shouldDisableSwiping = window.innerWidth >= 1162;
+        var shouldDisableSwiping = window.innerWidth > 1162;
         if (shouldDisableSwiping) {
             swiper.wrapperEl.classList.add('swiper-no-swiping');
         } else {
