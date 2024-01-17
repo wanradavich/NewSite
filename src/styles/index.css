@@ -282,21 +282,6 @@ article {
   font-size: 23px;
 }
 
-@media screen and (min-width: 1440px) {
-  .fig-credit {
-    font-size: 18px;
-    margin-top: 0;
-    margin-right: 30px;
-  }
-
-  .feature-headline {
-    width: 1240px;
-  }
-
-  #feature-img {
-    width: 1440px;
-  }
-
 article {
   margin-bottom: 30px;
 }
