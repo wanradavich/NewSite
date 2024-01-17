@@ -1201,4 +1201,7 @@ ul {
   .searchbar-container > label {
     width: 24px;
   }
+  .footer-nav {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
