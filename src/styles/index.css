@@ -192,12 +192,29 @@ article {
 
 /* top section */
 #feature-img-container {
-  text-align: right;
+  position: relative;
+  max-width: 100%;
 }
 
 #feature-img {
   height: auto;
   max-width: 100%;
+  display: block;
+}
+
+.fig-credit {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+#feature-date {
+  padding: 0;
+  color: rgb(255, 103, 103);
 }
 
 .feature-headline {
@@ -210,10 +227,6 @@ article {
   color: rgb(255, 230, 146);
   margin-bottom: 40px;
   font-size: 20px;
-}
-
-.fig-credit {
-  font-size: 12px;
 }
 
 .headline {
@@ -276,6 +289,11 @@ article {
   font-size: 18px;
 }
 
+.most-popular-feed {
+  display: flex;
+  justify-content: center;
+}
+
 /* featured voices */
 .fv-desc {
   font-size: 16px;
@@ -329,14 +347,20 @@ article {
   margin-left: 30px;
 }
 
+.mag-subs-item-list > li,
+.subscribe-desc {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 #sub-link {
   color: white;
 }
 
 .mag-subs-inner {
   padding-top: 30px;
-  background-color: rgb(180, 41, 41);
+  /* background-color: rgb(180, 41, 41); */
   color: white;
+  background: linear-gradient(-120deg, #d62121, #c72c2c, #3a1111);
 }
 
 /* Hamburger Nav Bar Styling  */
@@ -634,7 +658,6 @@ ul {
   .mag-subs-inner > .content {
     margin-top: 30px;
     margin: 0 auto;
-    font-size: 18px;
   }
 
   #subscribe-img {
@@ -646,13 +669,18 @@ ul {
   .mag-subs-item-list {
     margin-bottom: 40px;
     margin-left: 40px;
-    font-size: 15px;
+    margin-top: 30px;
+  }
+
+  .mag-subs-item-list > li {
+    font-size: 16px;
   }
 
   .subscribe-desc {
-    padding: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 0;
-    font-size: 15px;
+    font-size: 18px;
   }
 
   /*feature section*/
@@ -685,7 +713,6 @@ ul {
   }
 
   /* featured voices */
-
   #fv-img {
     width: 250px;
   }
