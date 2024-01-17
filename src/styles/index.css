@@ -811,37 +811,84 @@ article {
 }
 
 /* subscribe */
-.mag-subs-item-list > li::before {
-  content: "\2B50"; /* Unicode code point for the bell */
-  font-family: "Arial", sans-serif;
-  font-size: 15px;
-  margin-right: 10px;
+#subscribe-img {
+  width: 500px;
+  height: 500px;
 }
 
-.mag-subs-inner {
-  font-size: 18px;
+.mag-subs {
+  border-top: solid 1px black;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-bottom: solid 1px black;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .mag-subs-inner > .content {
-  margin-top: 25px;
   margin-bottom: 30px;
   text-align: center;
 }
 
-.btn {
-  color: white;
+#sub-btn {
+  color: black;
   font-size: 18px;
+  background-color: rgb(255, 213, 0);
 }
 
-.subscribe-desc {
-  font-size: 20px;
+.mag-subs-item-list {
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 30px;
 }
 
-.mag-subs {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border-top: solid 1px black;
-  border-bottom: solid 1px black;
+#sub-link {
+  color: white;
+}
+
+.mag-subs-inner {
+  padding-top: 30px;
+  background-color: rgb(180, 41, 41);
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .mag-subs-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 0px;
+  }
+
+  .mag-subs-inner > .content {
+    margin-top: 30px;
+    margin: 0 auto;
+  }
+
+  #subscribe-img {
+    width: 360px;
+    height: 360px;
+    margin-left: 15px;
+  }
+
+  .mag-subs-item-list {
+    margin-bottom: 40px;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mag-subs-item-list,
+  .subscribe-desc,
+  #sub-btn {
+    font-size: 25px;
+  }
+
+  #subscribe-img {
+    width: 460px;
+    height: 460px;
+    margin-left: 15px;
+  }
 }
 
 /* Hamburger Nav Bar Styling  */
