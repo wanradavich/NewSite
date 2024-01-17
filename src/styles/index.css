@@ -512,6 +512,26 @@ article {
     display: grid;
     grid-template-columns: 2fr 1fr;
   }
+  .searchbar-container {
+    /* margin-right: 150px; */
+    width: 400px;
+  }
+  #searchbar {
+    width: 300px;
+  }
+  #searchbar-icon {
+    display: block;
+    margin-right: 25px;
+    /* transition: 0.5s ease-in; */
+  }
+  #searchbar-icon > svg {
+    height: 18px;
+    width: 18px;
+  }
+  #searchbar-icon.inactive {
+    display: none;
+    /* transition: 0.5s ease-out; */
+  }
 }
 
 /* Desktop Styles (768px and above) */
@@ -663,6 +683,15 @@ article {
   .latest-stories-heading {
     font-size: 25px;
   }
+  /* searchbar styling */
+  .searchbar-container svg {
+    height: 18px;
+    width: 18px;
+  }
+  .searchbar-container > label {
+    width: 24px;
+  }
+
 }
 
 /* subscribe */
@@ -724,6 +753,30 @@ article {
 .hamburger.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
+/* Styling for nav search bar */
+#searchbar {
+  font-style: italic;
+  border: none;
+}
+.searchbar-container {
+  position: absolute;
+  right: -100%;
+  transition: 0.5s ease;
+  width: 275px;
+}
+.searchbar-container.active {
+  display: block;
+  right: 0;
+}
+#searchbar:focus {
+  border: 1px solid white;
+}
+/* @media(max-width: 1023px) {
+  #searchbar-icon {
+    display: none;
+  }
+} */
+
 /* Styling for the nav menu */
 .nav-menu {
   position: absolute;
@@ -745,13 +798,13 @@ li {
   font-size: 0.85rem;
 }
 .nav-menu.active {
-  margin-top: 5px;
+  margin-top: 25px;
   left: 0;
   background-color: white;
 }
 /* Nav button styling */
 .nav-buttons {
-  margin-top: 25px;
+  margin-top: 6px;
   padding: 20px;
   border-top: 0.5px solid black;
   border-bottom: 0.5px solid black;
@@ -821,9 +874,6 @@ ul {
   justify-content: center;
   margin-top: 20px;
 }
-/* .section2 {
-  border-left: 1px solid black
-} */
 .footer-nav > section {
   margin-top: 10px;
 }
