@@ -5,16 +5,33 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const navLinks = document.querySelectorAll(".nav-item");
+const searchbar = document.querySelector(".searchbar-container");
+const searchbarIcon = document.querySelector("#searchbar-icon");
+const cancel = document.querySelector("#cancel-button");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
+  searchbar.classList.toggle("active");
+  searchbarIcon.classList.toggle("inactive");
 });
+// hamgburger.addEventListener("click", () => {
+//   if(navMenu.classList.contains("active")){
+//     if(searchbar.classList.contains("active")){
+      
+//     }
+//   }
+//   hamburger.classList.toggle("active");
+//   navMenu.classList.toggle("active");
+//   searchbar.classList.toggle("active");
+//   searchbarIcon.classList.toggle("inactive");
+// });
 
 navLinks.forEach((navLink) => {
   navLink.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
+    searchbar.classList.remove("active");
   });
 });
 
@@ -77,4 +94,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Listen for window resize events to update swiping state
     window.addEventListener('resize', toggleSwiping);
+});
+searchbarIcon.addEventListener("click", () => {
+  searchbar.classList.toggle("active");
+  searchbarIcon.classList.toggle("inactive");
+});
+cancel.addEventListener("click", () => {
+  searchbar.classList.toggle("active");
+  searchbarIcon.classList.toggle("inactive");
 });
