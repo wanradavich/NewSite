@@ -73,6 +73,11 @@ a {
   font-family: "Roboto", sans-serif;
 }
 
+.you-should-know {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 /* Swiper + Carousel styling here */
 
 .mobile-carousel .item-selectors nav {
@@ -191,6 +196,9 @@ article {
 }
 
 /* top section */
+.featured-section {
+  padding-top: 0;
+}
 
 .topic {
   font-size: 11px;
