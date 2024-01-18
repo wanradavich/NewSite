@@ -167,6 +167,7 @@ function initializeSwiperAndForm(sectionName) {
 document.addEventListener('DOMContentLoaded', function () {
   initializeSwiperAndForm('you-should-know');
   initializeSwiperAndForm('editors-picks');
+  initializeSwiperAndForm('news-section-one');
   // You can call this function with different section names for other sections on your page.
 });
 
