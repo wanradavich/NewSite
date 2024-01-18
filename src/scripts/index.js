@@ -35,6 +35,36 @@ navLinks.forEach((navLink) => {
   });
 });
 
+searchbarIcon.addEventListener("click", () => {
+  searchbar.classList.toggle("active");
+  searchbarIcon.classList.toggle("inactive");
+});
+cancel.addEventListener("click", () => {
+  searchbar.classList.toggle("active");
+  searchbarIcon.classList.toggle("inactive");
+});
+
+
+
+/*
+    // Disable swiping for screens larger than 1162px
+    function toggleSwiping() {
+        var shouldDisableSwiping = window.innerWidth > 1162;
+        if (shouldDisableSwiping) {
+            swiper.wrapperEl.classList.add('swiper-no-swiping');
+        } else {
+            swiper.wrapperEl.classList.remove('swiper-no-swiping');
+        }
+    }
+
+    // Initial call to set swiping state
+    toggleSwiping();
+
+    // Listen for window resize events to update swiping state
+    window.addEventListener('resize', toggleSwiping);*/
+
+/*
+
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize Swiper
     var swiper = new Swiper('.you-should-know-carousel', {
@@ -57,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to update the active radio button based on the current slide index
     function updateActiveRadioButton() {
         var activeIndex = swiper.activeIndex;
-        var radioButton = document.getElementById('ysk-carousel-item-' + (activeIndex + 1));
+        var radioButton = document.getElementById('you-should-know-carousel-item-' + (activeIndex + 1));
         if (radioButton) {
             radioButton.checked = true;
         }
@@ -78,31 +108,69 @@ document.addEventListener('DOMContentLoaded', function () {
             swiper.slideTo(selectedValue - 1); // Swiper uses zero-based index
         }
     });
-/*
-    // Disable swiping for screens larger than 1162px
-    function toggleSwiping() {
-        var shouldDisableSwiping = window.innerWidth > 1162;
-        if (shouldDisableSwiping) {
-            swiper.wrapperEl.classList.add('swiper-no-swiping');
-        } else {
-            swiper.wrapperEl.classList.remove('swiper-no-swiping');
-        }
-    }
+});
+*/
 
-    // Initial call to set swiping state
-    toggleSwiping();
 
-    // Listen for window resize events to update swiping state
-    window.addEventListener('resize', toggleSwiping);*/
+function initializeSwiperAndForm(sectionName) {
+  var carouselClass = sectionName + '-carousel';
+  var nextButtonClass = sectionName + '-chevron-right';
+  var prevButtonClass = sectionName + '-chevron-left';
+  var formId = sectionName + '-carouselSelectorForm';
+  var itemPrefix = sectionName + '-carousel-item';
+
+  // Initialize Swiper
+  var swiper = new Swiper('.' + carouselClass, {
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+      navigation: {
+          nextEl: '.' + nextButtonClass,
+          prevEl: '.' + prevButtonClass,
+      },
+      breakpoints: {
+          1162: {
+              slidesPerView: 'auto',
+          },
+      }
+  });
+
+  // Add event listener to the form to change the active slide
+  var carouselSelectorForm = document.getElementById(formId);
+
+  // Function to update the active radio button based on the current slide index
+  function updateActiveRadioButton() {
+      var activeIndex = swiper.activeIndex;
+      var radioButton = document.getElementById(itemPrefix + '-' + (activeIndex + 1));
+      if (radioButton) {
+          radioButton.checked = true;
+      }
+  }
+
+  // Initial update when the page loads
+  updateActiveRadioButton();
+
+  // Update on Swiper slide change
+  swiper.on('slideChange', function () {
+      updateActiveRadioButton();
+  });
+
+  // Add event listener to the form to change the active slide
+  carouselSelectorForm.addEventListener('change', function (event) {
+      var selectedValue = event.target.value;
+      if (selectedValue) {
+          swiper.slideTo(selectedValue - 1); // Swiper uses zero-based index
+      }
+  });
+}
+
+// Example usage:
+document.addEventListener('DOMContentLoaded', function () {
+  initializeSwiperAndForm('you-should-know');
+  initializeSwiperAndForm('editors-picks');
+  // You can call this function with different section names for other sections on your page.
 });
-searchbarIcon.addEventListener("click", () => {
-  searchbar.classList.toggle("active");
-  searchbarIcon.classList.toggle("inactive");
-});
-cancel.addEventListener("click", () => {
-  searchbar.classList.toggle("active");
-  searchbarIcon.classList.toggle("inactive");
-});
+
+
 
 // Video Script
 

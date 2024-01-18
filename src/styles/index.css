@@ -79,89 +79,113 @@ a {
 }
 
 /* Swiper + Carousel styling here */
-
 .mobile-carousel .item-selectors nav {
   margin: 0.5rem 0;
   text-align: center;
 }
 
-.you-should-know-carousel {
+/* Shared styles for both carousels */
+.homepage-section .partial.mobile-carousel {
   width: 100%;
   overflow: hidden;
 }
 
-.swiper-container {
+.homepage-section .swiper-container {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
-.item-selectors {
+.homepage-section .item-selectors {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.swiper-container {
-  width: 100%;
-  height: 100%;
-  position: relative; /* Position relative for absolutely positioned children */
-}
-
-.swiper-slide {
+.homepage-section .swiper-container .swiper-slide {
   position: relative;
   text-align: center;
-  overflow: hidden; /* Ensure the gradient doesn't overflow */
+  overflow: hidden;
+  margin-right: 10px;
 }
 
-.swiper-slide img {
-  width: 100%; /* Make the image fill the width of the container */
-  height: 100%; /* Make the image fill the height of the container */
-  object-fit: cover; /* Maintain the image's aspect ratio */
-  position: relative; /* Ensure the pseudo-element is positioned relative to the image */
+.homepage-section .swiper-container .swiper-slide:last-child {
+  margin-right: 0;
 }
 
-.swiper-slide::after {
+.homepage-section .swiper-container .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.homepage-section .editors-picks-wrapper .swiper-container .swiper-slide img {
+  width: 100vw;
+  height: 100vw;
+  object-fit: cover;
+  position: relative;
+}
+
+.homepage-section .you-should-know .swiper-container .swiper-slide::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   margin: 0;
   width: calc(100%);
-  height: 50%; /* Adjust the height of the gradient overlay */
+  height: 50%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-  pointer-events: none; /* Allow interaction with underlying content */
+  pointer-events: none;
 }
 
-.swiper-slide h3 {
+.homepage-section .you-should-know .swiper-container .swiper-slide h3 {
   position: absolute;
   width: 50%;
   text-align: left;
-  bottom: 80px; /* Adjust the distance from the bottom as needed */
-  left: 40px; /* Adjust the distance from the left as needed */
-  color: #fff; /* Text color on the image */
-  margin: 0; /* Remove default margins */
+  bottom: 80px;
+  left: 40px;
+  color: #fff;
+  margin: 0;
   z-index: 2;
   font-weight: 700;
   font-size: 1.3rem;
 }
 
-.swiper-slide p {
+.homepage-section .you-should-know .swiper-container .swiper-slide p {
   position: absolute;
   width: 60%;
   text-align: left;
-  bottom: 40px; /* Adjust the distance from the bottom as needed */
-  left: 40px; /* Adjust the distance from the left as needed */
-  color: #fff; /* Text color on the image */
-  margin: 0; /* Remove default margins */
+  bottom: 40px;
+  left: 40px;
+  color: #fff;
+  margin: 0;
   z-index: 2;
   font-size: 0.7rem;
 }
 
-.item-selectors {
-  text-align: center;
-  margin-bottom: 20px;
+.homepage-section .swiper-container .swiper-slide h3 {
+  width: 90%;
+  text-align: left;
+  color: black;
+  margin: 0.5rem;
+  z-index: 2;
+  font-weight: 700;
+  font-size: 0.8rem;
 }
 
-#carouselSelectorForm {
+.homepage-section .swiper-container .swiper-slide p {
+  position: relative;
+  width: 60%;
+  text-align: left;
+  bottom: 40px;
+  left: 40px;
+  color: #fff;
+  margin: 0;
+  z-index: 2;
+  font-size: 0.7rem;
+}
+
+#you-should-know-carouselSelectorForm, #editors-picks-carouselSelectorForm {
   display: flex;
   justify-content: center;
 }
@@ -186,13 +210,31 @@ a {
   display: none;
 }
 
-.you-should-know-chevron-left,
-.you-should-know-chevron-right {
+.you-should-know-carousel .you-should-know-chevron-left,
+.you-should-know-carousel .you-should-know-chevron-right,
+.editors-picks-carousel .editors-picks-chevron-left,
+.editors-picks-carousel .editors-picks-chevron-right {
   display: none; /* Hide the buttons */
 }
 
 article {
   margin-bottom: 30px;
+}
+
+.editors-picks-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.section-heading.editors-picks-header-title {
+  margin: 0 1rem;
+}
+
+.subscribe-link {
+  margin: 1rem 1rem 0 1rem; /* Adjust as needed */
+  color: red;
+  text-decoration: underline;
 }
 
 /* top section */
@@ -624,55 +666,91 @@ iframe {
 @media screen and (min-width: 768px) {
   /* Swiper Sections*/
 
+  .homepage-section .editors-picks-wrapper .swiper-container .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+
   .mobile-carousel .item-selectors nav {
     display: none;
   }
-
+  
   .mobile-carousel
     .swiper-container.you-should-know-carousel
     .swiper-wrapper
-    .swiper-slide {
+    .swiper-slide{
     width: 280px; /* Set the width as needed */
     height: 420px; /* Set the height as needed */
     box-sizing: border-box; /* Include border in the width and height */
   }
 
-  .swiper-slide h3 {
+  .mobile-carousel
+  .swiper-container.editors-picks-carousel
+  .swiper-wrapper
+  .swiper-slide {
+    width: 336px; /* Set the width as needed */
+    height: 100%; /* Set the height as needed */
+    box-sizing: border-box; /* Include border in the width and height */
+  }
+
+  .homepage-section .you-should-know .swiper-container .swiper-slide h3 {
     position: absolute;
-    bottom: 60px; /* Adjust the distance from the bottom as needed */
-    left: 30px; /* Adjust the distance from the left as needed */
-    color: #fff; /* Text color on the image */
-    margin: 0; /* Remove default margins */
+    width: 50%;
+    text-align: left;
+    bottom: 60px;
+    left: 30px;
+    color: #fff;
+    margin: 0;
     z-index: 2;
     font-weight: 700;
     font-size: 15px;
   }
-
-  .swiper-slide p {
+  
+  .homepage-section .you-should-know .swiper-container .swiper-slide p {
     position: absolute;
-    bottom: 20px; /* Adjust the distance from the bottom as needed */
-    left: 30px; /* Adjust the distance from the left as needed */
-    color: #fff; /* Text color on the image */
-    margin: 0; /* Remove default margins */
+    width: 60%;
+    text-align: left;
+    bottom: 20px;
+    left: 30px;
+    color: #fff;
+    margin: 0;
     z-index: 2;
     font-size: 10px;
   }
 
-  .you-should-know-tablet {
+  .homepage-section .swiper-container .swiper-slide h3 {
+    color: black; /* Text color on the image */
+    margin: 0; /* Remove default margins */
+    z-index: 2;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    bottom: 40px;
+  }
+  
+  .homepage-section .swiper-container .swiper-slide p {
+    position: relative;
+    width: 60%;
+    text-align: left;
+    bottom: 40px;
+    left: 40px;
+    color: #fff;
+    margin: 0;
+    z-index: 2;
+    font-size: 0.7rem;
+  }
+  
+  .you-should-know-tablet,
+  .editors-picks-tablet {
     position: relative;
     height: 100%;
     overflow: hidden;
-    background: linear-gradient(
-      to right,
-      #fff,
-      transparent 10%,
-      transparent 90%,
-      #fff
-    );
+    background: linear-gradient(to right, #fff, transparent 10%, transparent 90%, #fff);
   }
-
-  .you-should-know-tablet::before,
-  .you-should-know-tablet::after {
+  
+  .you-should-know-tablet::before{
     content: "";
     position: absolute;
     top: 0;
@@ -680,33 +758,37 @@ iframe {
     height: 100%;
     background: linear-gradient(to right, #fff, transparent);
   }
-
+  
   .you-should-know-tablet::before {
     left: 0;
   }
-
+  
   .you-should-know-tablet::after {
     right: 0;
     background: linear-gradient(to right, transparent, #fff);
   }
-
+  
   .you-should-know-tablet-content {
     display: flex;
     overflow-x: auto;
     padding: 20px; /* Adjust as needed */
   }
-
-  .you-should-know-tablet-content article {
+  
+  .you-should-know-tablet-content article,
+  .editors-picks-tablet-content article {
     /* Your styles for each article */
     margin-right: 20px; /* Adjust as needed */
   }
-
-  .you-should-know-carousel {
+  
+  .you-should-know-carousel,
+  .editors-picks-carousel {
     position: relative;
   }
-
-  .you-should-know-chevron-left,
-  .you-should-know-chevron-right {
+  
+  .you-should-know-carousel .you-should-know-chevron-left,
+  .you-should-know-carousel .you-should-know-chevron-right,
+  .editors-picks-carousel .editors-picks-chevron-left,
+  .editors-picks-carousel .editors-picks-chevron-right {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -722,13 +804,28 @@ iframe {
     align-items: center;
     z-index: 10;
   }
-
-  .you-should-know-chevron-left {
+  
+  .you-should-know-chevron-left,
+  .editors-picks-chevron-left {
     left: 10px;
   }
-
-  .you-should-know-chevron-right {
+  
+  .you-should-know-chevron-right,
+  .editors-picks-chevron-right {
     right: 10px;
+  }
+  
+  .editors-picks-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .subscribe-link {
+    margin-top: 0; /* Reset margin for tablet and desktop */
+    margin-left: auto; /* Push the link to the right */
   }
 
   /*Mags Screen*/
@@ -895,38 +992,83 @@ iframe {
     box-sizing: border-box; /* Include border in the width and height */
   }
 
+  .mobile-carousel
+  .swiper-container.editors-picks-carousel
+  .swiper-wrapper
+  .swiper-slide {
+    width: calc((100% - 40px) / 4); /* Set the width as needed */
+    height: 100%; /* Set the height as needed */
+    box-sizing: border-box; 
+  }
+
   .swiper-container {
     width: 100%;
     max-width: 1440px;
   }
 
   .swiper-wrapper {
-    margin-left: 10px;
     display: flex;
     justify-content: space-between; /* or any other value like space-around or space-evenly */
-    align-items: center; /* optional: align items in the center */
+    align-items: flex-start;
+    margin: 0 auto; /* optional: align items in the center */
   }
 
-  .mobile-carousel .swiper-container.you-should-know-carousel {
+  .mobile-carousel .swiper-container.you-should-know-carousel,
+  .mobile-carousel .swiper-container.editors-picks-carousel{
     width: 100%;
     max-width: 1440px;
     margin: 0 auto; /* Center the container horizontally */
     overflow: hidden; /* Ensure the container doesn't overflow */
+    padding: 0 3rem;
   }
 
-  .swiper-slide h3 {
+  .mobile-carousel .swiper-container.you-should-know-carousel {
+    max-width: none;
+    padding: 0;
+  }
+
+  .homepage-section .swiper-container .swiper-slide {
+    margin: 0;
+  }
+
+  .homepage-section .you-should-know .swiper-container .swiper-slide h3 {
     position: absolute;
-    bottom: 50px; /* Adjust the distance from the bottom as needed */
-    left: 20px; /* Adjust the distance from the left as needed */
-    color: #fff; /* Text color on the image */
-    margin: 0; /* Remove default margins */
+    width: 50%;
+    text-align: left;
+    bottom: 50px;
+    left: 20px;
+    color: #fff;
+    margin: 0;
     z-index: 2;
     font-weight: 700;
     font-size: 0.7rem;
   }
-
-  .swiper-slide p {
+  
+  .homepage-section .you-should-know .swiper-container .swiper-slide p {
     position: absolute;
+    width: 60%;
+    text-align: left;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    margin: 0;
+    z-index: 2;
+    font-size: 0.5rem;
+    font-weight: 400;
+  }
+
+
+  .homepage-section .swiper-container .swiper-slide h3 {
+    color: black; /* Text color on the image */
+    margin: 0; /* Remove default margins */
+    z-index: 2;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .homepage-section .swiper-container .swiper-slide p {
+    position: relative;
     bottom: 20px; /* Adjust the distance from the bottom as needed */
     left: 20px; /* Adjust the distance from the left as needed */
     color: #fff; /* Text color on the image */
@@ -936,7 +1078,8 @@ iframe {
     z-index: 2;
   }
 
-  .you-should-know-tablet {
+  .you-should-know-tablet,
+  .editors-picks-tablet {
     position: relative;
     height: 100%;
     overflow: hidden;
@@ -950,7 +1093,9 @@ iframe {
   }
 
   .you-should-know-tablet::before,
-  .you-should-know-tablet::after {
+  .you-should-know-tablet::after,
+  .editors-picks-tablet::before,
+  .editors-picks-tablet::after {
     content: "";
     position: absolute;
     top: 0;
@@ -959,32 +1104,39 @@ iframe {
     background: linear-gradient(to right, #fff, transparent);
   }
 
-  .you-should-know-tablet::before {
+  .you-should-know-tablet::before,
+  .editors-picks-tablet::before {
     left: 0;
   }
 
-  .you-should-know-tablet::after {
+  .you-should-know-tablet::after,
+  .editors-picks-tablet::after {
     right: 0;
     background: linear-gradient(to right, transparent, #fff);
   }
 
-  .you-should-know-tablet-content {
+  .you-should-know-tablet-content,
+  .editors-picks-tablet-content {
     display: flex;
     overflow-x: auto;
     padding: 20px; /* Adjust as needed */
   }
 
-  .you-should-know-tablet-content article {
+  .you-should-know-tablet-content article,
+  .editors-picks-tablet-content article {
     /* Your styles for each article */
     margin-right: 20px; /* Adjust as needed */
   }
 
-  .you-should-know-carousel {
+  .you-should-know-carousel,
+  .editors-picks-carousel {
     position: relative;
   }
 
-  .you-should-know-chevron-left,
-  .you-should-know-chevron-right {
+  .you-should-know-carousel .you-should-know-chevron-left,
+  .you-should-know-carousel .you-should-know-chevron-right,
+  .editors-picks-carousel .editors-picks-chevron-left,
+  .editors-picks-carousel .editors-picks-chevron-right {
     display: none; /* Hide the chevrons in desktop view */
   }
 
