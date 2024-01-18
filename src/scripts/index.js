@@ -170,3 +170,49 @@ document.addEventListener('DOMContentLoaded', function () {
   // You can call this function with different section names for other sections on your page.
 });
 
+
+
+// Video Script
+
+// cycle through videos 
+
+function playVideo(videoUrl, title, description) {
+    var mainVideoIframe = document.querySelector('.main-video iframe');
+    var mainTitleElement = document.querySelector('.video-info .info-left .title');
+    var mainDescriptionElement = document.querySelector('.video-info .info-right .description');
+
+    // Save the current main video details
+    var currentMainVideoUrl = mainVideoIframe.src;
+    var currentMainTitle = mainTitleElement.textContent;
+    var currentMainDescription = mainDescriptionElement.textContent;
+
+    // Set the clicked suggested video as the main video
+    mainVideoIframe.src = videoUrl;
+    mainTitleElement.textContent = title;
+    mainDescriptionElement.textContent = description;
+
+    // Update the clicked suggested video with the details of the current main video
+    var clickedVideo = event.currentTarget;
+    var clickedThumbnail = clickedVideo.querySelector('.thumbnail');
+    var clickedTitle = clickedVideo.querySelector('.title');
+
+    clickedThumbnail.style.backgroundImage = 'url(THUMBNAIL_FOR_CURRENT_MAIN_VIDEO)';
+    clickedTitle.textContent = currentMainTitle; 
+  }
+
+
+
+
+
+
+function playVideo(videoUrl, title, description) {
+    var mainVideoIframe = document.querySelector('.main-video iframe');
+    var titleElement = document.querySelector('.video-info .info-left .title');
+    var descriptionElement = document.querySelector('.video-info .info-right .description');
+
+    mainVideoIframe.src = videoUrl;
+    titleElement.textContent = title;
+    descriptionElement.textContent = description;
+  }
+
+
