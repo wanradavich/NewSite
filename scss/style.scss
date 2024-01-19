@@ -13,6 +13,11 @@
 @use "audio";
 
 // @charset "UTF-8";
+:root {
+  --font-family-main: $font-family-main;
+  --font-family-heading: $font-family-heading;
+  --base-font-size: $base-font-size;
+}
 
 %margin0padding0{
   margin: 0;
@@ -28,7 +33,7 @@ html,.margin0padding0 {
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: var(--font-family-main);
   // margin: 0;
   // padding: 0;
   @extend %margin0padding0;
@@ -114,12 +119,12 @@ article {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 3rem;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-family-heading)
 }
 
 /* featured voices */
 .fv-desc {
-  font-size: 16px;
+  font-size: var(--base-font-size);
 }
 
 .featured-voices-list-item-author > a {
@@ -237,6 +242,38 @@ article {
   #header-logo {
     margin-right: 10px;
   }
+  
+  /*Mags Screen*/
+  .mag-subs-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 0px;
+  }
+  .mag-subs-inner > .content {
+    margin-top: 30px;
+    margin: 0 auto;
+  }
+  #subscribe-img {
+    width: 400px;
+    height: 400px;
+    margin-left: 15px;
+  }
+  .mag-subs-item-list {
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-top: 30px;
+  }
+  .mag-subs-item-list > li {
+    font-size: var(--base-font-size);
+  }
+  .subscribe-desc {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0;
+    font-size: 18px;
+  }
+  /*feature section*/
 
   /* featured voices */
   #fv-img {
@@ -467,5 +504,5 @@ article {
 #header-subscribe:hover {
   animation: wiggle 2s linear infinite;
 }
-
+}
 /*# sourceMappingURL=index.css.map */
