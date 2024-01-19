@@ -1,0 +1,178 @@
+@use "variables";
+@use "mixins";
+@use "typograpy";
+
+/* top section */
+.featured-section {
+  padding-top: 0;
+
+  .topic {
+    @include star-icon;
+  }
+
+  #feature-img-container {
+    position: relative;
+    max-width: 100%;
+  }
+
+  #feature-img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+  }
+
+  .fig-credit {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  #feature-date {
+    padding: 0;
+    color: $custom-red;
+  }
+
+  .feature-headline {
+    background-color: black;
+    color: white;
+    padding: 20px;
+
+    .feature-title {
+      color: $custom-yellow;
+      margin-bottom: 40px;
+      font-size: 20px;
+    }
+  }
+}
+
+.headline {
+  padding: 15px;
+  margin: 0;
+}
+
+.secondary-title {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.secondary-headline {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.secondary-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.latest-stories-heading {
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+}
+
+.most-popular-feed-item-container {
+  list-style: none;
+
+  .most-popular-feed-item-section {
+    color: $custom-red;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .most-popular-feed-head {
+    font-size: 20px;
+  }
+
+  .most-popular-feed-item-index {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    margin-bottom: px;
+    font-size: 14px;
+    margin-right: 5px;
+  }
+
+  .most-popular-feed-item {
+    line-height: 50px;
+  }
+
+  .most-popular-feed-item-headline {
+    font-size: 18px;
+  }
+}
+
+.most-popular-feed {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  #feature-img {
+    max-width: 100%;
+  }
+  .published-date {
+    padding: 10px;
+    font-size: $date-size;
+  }
+  .secondary-img {
+    max-width: 100%;
+    padding: 10px;
+  }
+  .secondary-headline {
+    max-width: 300px;
+  }
+  .secondary-title {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .secondary {
+    display: flex;
+    flex-direction: row;
+    row-gap: 10px;
+  }
+}
+
+@media screen and (min-width: 1162px) {
+  .feature-flex {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+  .featured-section {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+  #feature-img {
+    width: 100%;
+  }
+  .image-container {
+    max-width: 1100px;
+  }
+  .feature-title {
+    font-size: 25px;
+  }
+  .feature-headline {
+    max-width: 100%;
+    padding: 10px;
+    font-size: 20px;
+  }
+  .secondary-img {
+    max-width: 100%;
+    padding: 10px;
+  }
+  .secondary {
+    display: flex;
+    flex-direction: row;
+  }
+  .secondary-title {
+    font-size: 18px;
+    width: 250px;
+  }
+}
