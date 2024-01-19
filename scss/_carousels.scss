@@ -1,4 +1,4 @@
-/* Swiper + Carousel styling here */
+@use "variables" as *;
 
 .mobile-carousel .item-selectors nav {
     margin: 0.5rem 0;
@@ -116,11 +116,11 @@
   
   .mobile-carousel .item-selectors nav {
     input:checked + label {
-      background: yellow;
+      background: $custom-yellow;
     }
   
     label {
-      background: red;
+      background: $custom-red;
       border-radius: 100%;
       cursor: pointer;
       display: inline-block;
@@ -177,7 +177,7 @@
     margin: 1rem 1rem 0 1rem;
   
     /* Adjust as needed */
-    color: red;
+    color: $custom-red;
     text-decoration: underline;
     text-align: right;
   }
