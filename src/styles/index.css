@@ -484,10 +484,9 @@ article {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
-  /* width: 80%; */
+  z-index: 1000;
   text-align: center;
   transition: 0.5s;
-  /* border: 1px solid #dcdcdc; */
 }
 li {
   padding: 10px;
@@ -1305,6 +1304,9 @@ iframe {
     padding: 60px;
     font-size: 20px;
   }
+  .footer-nav {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -1319,8 +1321,5 @@ iframe {
   }
   .searchbar-container > label {
     width: 24px;
-  }
-  .footer-nav {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
