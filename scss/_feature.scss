@@ -145,10 +145,14 @@
     flex-direction: column;
     margin-right: 20px;
   }
+  
   .featured-section {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    max-width: 1440px;
+    margin: 0 auto;
   }
+
   #feature-img {
     width: 100%;
   }
