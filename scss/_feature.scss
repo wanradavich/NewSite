@@ -1,13 +1,13 @@
-@use "variables";
-@use "mixins";
-@use "typograpy";
+@use "variables" as *;
+@use "mixins" as *;
+@use "typography" as *;
 
 /* top section */
 .featured-section {
   padding-top: 0;
 
   .topic {
-    @include star-icon;
+    @include star-icon();
   }
 
   #feature-img-container {
