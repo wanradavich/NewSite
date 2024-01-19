@@ -488,12 +488,19 @@ article {
 .searchbar-container {
   position: absolute;
   right: -100%;
+  /* position: fixed;
+  transform: translateX(100%); */
   transition: 0.5s ease;
   width: 275px;
+  /* display: none; */
 }
 .searchbar-container.active {
   display: block;
   right: 0;
+  /* position: fixed;
+  transform: translateX(100%);
+  transition: 0.5s ease;
+  width: 275px; */
 }
 #searchbar:focus {
   border: 1px solid white;
@@ -505,6 +512,9 @@ article {
 }
 
 /* Styling for the nav menu */
+/* .navbar {
+  overflow-x: hidden;
+} */
 .nav-menu {
   position: absolute;
   left: -100%;
