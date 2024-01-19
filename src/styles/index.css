@@ -1458,6 +1458,6 @@ iframe {
 }
 
 /* Apply animation to the button */
-#header-subscribe {
+#header-subscribe:hover {
   animation: wiggle 2s linear infinite;
 }
