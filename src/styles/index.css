@@ -485,36 +485,23 @@ article {
   font-style: italic;
   border: none;
 }
+
 .searchbar-container {
-  position: absolute;
-  right: -100%;
-  /* position: fixed;
-  transform: translateX(100%); */
-  transition: 0.5s ease;
-  width: 275px;
-  /* display: none; */
-}
-.searchbar-container.active {
-  display: block;
+  position: fixed;
   right: 0;
-  /* position: fixed;
   transform: translateX(100%);
-  transition: 0.5s ease;
-  width: 275px; */
+  transition: transform 0.5s ease;
+  width: 275px;
 }
+
+.searchbar-container.active {
+  transform: translateX(0);
+}
+
 #searchbar:focus {
   border: 1px solid white;
 }
-@media (max-width: 1023px) {
-  #searchbar-icon {
-    display: none;
-  }
-}
 
-/* Styling for the nav menu */
-/* .navbar {
-  overflow-x: hidden;
-} */
 .nav-menu {
   position: absolute;
   left: -100%;
