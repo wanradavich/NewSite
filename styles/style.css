@@ -671,16 +671,8 @@
     /* Hide the chevrons in desktop view */
   }
 }
-.audio-container {
-  display: flex;
-  justify-content: center;
-}
-.audio-container .audio-iframe {
-  border-radius: 12px;
-  max-width: 100px;
-}
-.audio-container .iframe-style {
-  width: 60%;
+.iframe-style {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -1184,6 +1176,12 @@ ul {
   }
   /* video */
   /* audio  */
+  .iframe-style {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 }
 @media screen and (min-width: 1162px) {
   /* header */
@@ -1281,6 +1279,12 @@ ul {
   .footer-nav {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+  .iframe-style {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 }
 @media screen and (min-width: 1440px) {
   .secondary-img {
@@ -1294,6 +1298,12 @@ ul {
   }
   .searchbar-container > label {
     width: 24px;
+  }
+  .iframe-style {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 }
 /* anime */
