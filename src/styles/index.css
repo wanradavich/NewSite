@@ -720,11 +720,7 @@ iframe {
 
   #sign-up {
     min-width: 160px;
-  }
-
-  #sign-up {
     margin-left: 0;
-    margin-right: 50px;
   }
 
   #header-logo {
@@ -1115,6 +1111,7 @@ iframe {
 
   #sign-up {
     min-width: 200px;
+    margin: 0;
   }
 
   #header-logo {
