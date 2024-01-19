@@ -177,6 +177,10 @@ a {
   display: none;
 }
 
+.homepage-section .you-should-know .swiper-container .swiper-slide p {
+  display: block;
+}
+
 #you-should-know-carouselSelectorForm, 
 #editors-picks-carouselSelectorForm,
 #news-section-one-carouselSelectorForm {
@@ -1218,7 +1222,7 @@ iframe {
     grid-template-columns: 3fr 1fr;
   }
   #feature-img {
-    width: 1100px;
+    width: 100%;
   }
 
   .image-container {
@@ -1306,6 +1310,10 @@ iframe {
   }
   .footer-nav {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  } 
+  iframe {
+    width: 100%;
+    height: auto;
   }
 }
 
