@@ -1065,6 +1065,11 @@ iframe {
   #header-choice {
     font-size: 20px;
   }
+
+  #sign-up {
+    margin-right: 0;
+  }
+
   /*Swiper Sections*/
 
   .mobile-carousel
