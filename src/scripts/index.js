@@ -10,22 +10,33 @@ const searchbarIcon = document.querySelector("#searchbar-icon");
 const cancel = document.querySelector("#cancel-button");
 
 hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-  searchbar.classList.toggle("active");
-  searchbarIcon.classList.toggle("inactive");
+    const isNavMenuActive = navMenu.classList.contains("active");
+    const isSearchBarActive = searchbar.classList.contains("active");
+
+    if (!isNavMenuActive && !isSearchBarActive) {
+        // If neither nav menu nor search bar have an active class, give them both an active class
+        navMenu.classList.add("active");
+        searchbar.classList.add("active");
+    } else if (isNavMenuActive && isSearchBarActive) {
+        // If both nav menu and search bar have an active class, remove the active class from both
+        navMenu.classList.remove("active");
+        searchbar.classList.remove("active");
+    } else {
+        // If search bar has an active class and nav menu does not, or vice versa, give both an active class
+        navMenu.classList.add("active");
+        searchbar.classList.add("active");
+    }
+
+    // Toggle hamburger class
+    hamburger.classList.toggle("active");
+
+    // Toggle searchbar icon class
+    if (searchbar.classList.contains("active")) {
+        searchbarIcon.classList.add("inactive");
+    } else {
+        searchbarIcon.classList.remove("inactive");
+    }
 });
-// hamgburger.addEventListener("click", () => {
-//   if(navMenu.classList.contains("active")){
-//     if(searchbar.classList.contains("active")){
-      
-//     }
-//   }
-//   hamburger.classList.toggle("active");
-//   navMenu.classList.toggle("active");
-//   searchbar.classList.toggle("active");
-//   searchbarIcon.classList.toggle("inactive");
-// });
 
 navLinks.forEach((navLink) => {
   navLink.addEventListener("click", () => {
