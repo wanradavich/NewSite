@@ -519,6 +519,9 @@ article {
 
 li {
   padding: 10px;
+  /* font-size: 0.85rem; */
+}
+li ~ li {
   font-size: 0.85rem;
 }
 
@@ -545,8 +548,7 @@ li {
   background-color: rgb(217, 69, 61);
   color: white;
 }
-
-.nav-buttons > button {
+.nav-buttons button {
   padding: 10px;
   border-radius: 3px;
   border: none;
@@ -987,6 +989,7 @@ iframe {
   #searchbar {
     width: 300px;
   }
+  
   #searchbar-icon {
     display: block;
     margin-right: 25px;
