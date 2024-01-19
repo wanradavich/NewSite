@@ -496,6 +496,7 @@ article {
 
 .searchbar-container.active {
   transform: translateX(0);
+  position: absolute;
 }
 
 #searchbar:focus {
