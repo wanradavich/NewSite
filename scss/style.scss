@@ -590,12 +590,13 @@ ul {
   //   border-radius: 12px;
   //   max-width: 100px;
   // }
-  // .iframe-style {
-  //   width: 60%;
-  //   margin-left: auto;
-  //   margin-right: auto;
-  //   display: block;
-  // }
+
+  .iframe-style {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 }
 @media screen and (min-width: 1162px) {
   /* header */
@@ -703,10 +704,12 @@ ul {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  // iframe {
-  //   width: 100%;
-  //   height: auto;
-  // }
+  .iframe-style {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 }
 @media screen and (min-width: 1440px) {
   .secondary-img {
@@ -720,6 +723,12 @@ ul {
   }
   .searchbar-container > label {
     width: 24px;
+  }
+  .iframe-style {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 }
 /* anime */
