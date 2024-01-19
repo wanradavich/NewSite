@@ -279,125 +279,6 @@ article {
   text-align: right;
 }
 
-/* top section */
-.featured-section {
-  padding-top: 0;
-}
-
-.topic {
-  font-size: 11px;
-  margin-right: 15px;
-}
-
-.topic::before {
-  content: "★";
-  padding: 5px;
-  color: rgb(243, 219, 81);
-}
-
-#feature-img-container {
-  position: relative;
-  max-width: 100%;
-}
-
-#feature-img {
-  height: auto;
-  max-width: 100%;
-  display: block;
-}
-
-.fig-credit {
-  position: absolute;
-  bottom: 0;
-  right: 10px;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 5px 10px;
-  font-size: 12px;
-}
-
-#feature-date {
-  padding: 0;
-  color: rgb(255, 103, 103);
-}
-
-.feature-headline {
-  background-color: black;
-  color: white;
-  padding: 20px;
-}
-
-.feature-title {
-  color: rgb(255, 230, 146);
-  margin-bottom: 40px;
-  font-size: 20px;
-}
-
-.headline {
-  padding: 15px;
-  margin: 0;
-}
-
-.secondary-title {
-  font-weight: bolder;
-  font-size: 20px;
-}
-
-.secondary-headline {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 50px;
-  font-weight: bold;
-}
-
-.secondary-img {
-  max-width: 100%;
-  /* width: 320px; */
-  height: auto;
-}
-
-.latest-stories-heading {
-  display: flex;
-  justify-content: center;
-  font-size: 35px;
-}
-
-.most-popular-feed-item-container {
-  list-style: none;
-}
-
-.most-popular-feed-item-section {
-  color: rgb(197, 19, 19);
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.most-popular-feed-head {
-  font-size: 20px;
-}
-
-.most-popular-feed-item-index {
-  color: white;
-  background-color: black;
-  padding: 10px;
-  margin-bottom: px;
-  font-size: 14px;
-  margin-right: 5px;
-}
-
-.most-popular-feed-item {
-  line-height: 50px;
-}
-
-.most-popular-feed-item-headline {
-  font-size: 18px;
-}
-
-.most-popular-feed {
-  display: flex;
-  justify-content: center;
-}
-
 /* featured voices */
 .fv-desc {
   font-size: 16px;
@@ -950,28 +831,7 @@ iframe {
     font-size: 18px;
   }
   /*feature section*/
-  #feature-img {
-    max-width: 100%;
-  }
-  .published-date {
-    padding: 10px;
-  }
-  .secondary-img {
-    max-width: 100%;
-    padding: 10px;
-  }
-  .secondary-headline {
-    max-width: 300px;
-  }
-  .secondary-title {
-    font-size: 16px;
-    padding: 10px;
-  }
-  .secondary {
-    display: flex;
-    flex-direction: row;
-    row-gap: 10px;
-  }
+
   /* featured voices */
   #fv-img {
     width: 250px;
@@ -1040,12 +900,12 @@ iframe {
     /* transition: 0.5s ease-out; */
   }
   /* video */
-  .vdo-description,
-  .date-and-duration,
-  .playlist-heading {
-    padding: 40px;
-    font-size: 18px;
-  }
+  // .vdo-description,
+  // .date-and-duration,
+  // .playlist-heading {
+  //   padding: 40px;
+  //   font-size: 18px;
+  // }
   /* audio  */
   .audio-container {
     display: flex;
@@ -1299,42 +1159,7 @@ iframe {
     margin-left: 15px;
   }
   /*Feature*/
-  .feature-flex {
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-  }
-  .featured-section {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-  }
-  #feature-img {
-    width: 100%;
-  }
-  .image-container {
-    max-width: 1100px;
-  }
-  .feature-title {
-    font-size: 25px;
-  }
-  .feature-headline {
-    max-width: 100%;
-    padding: 10px;
-    font-size: 20px;
-  }
-  .secondary-img {
-    max-width: 100%;
-    padding: 10px;
-  }
-  .secondary {
-    display: flex;
-    flex-direction: row;
-    /* max-width: 600px; */
-  }
-  .secondary-title {
-    font-size: 18px;
-    width: 250px;
-  }
+
   /* featured-voices */
   #fv-img {
     width: 400px;
@@ -1374,19 +1199,19 @@ iframe {
     font-size: 20px;
   }
   /* video */
-  .vdo-description,
-  .date-and-duration,
-  .playlist-heading {
-    padding: 60px;
-    font-size: 20px;
-  }
+  // .vdo-description,
+  // .date-and-duration,
+  // .playlist-heading {
+  //   padding: 60px;
+  //   font-size: 20px;
+  // }
   .footer-nav {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  iframe {
-    width: 100%;
-    height: auto;
-  }
+  // iframe {
+  //   width: 100%;
+  //   height: auto;
+  // }
 }
 @media screen and (min-width: 1440px) {
   .secondary-img {

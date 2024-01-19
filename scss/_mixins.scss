@@ -1,0 +1,10 @@
+@mixin star-icon($color: $custom-yellow) {
+  font-size: 11px;
+  margin-right: 15px;
+
+  &::before {
+    content: "★";
+    padding: 5px;
+    color: $color;
+  }
+}
