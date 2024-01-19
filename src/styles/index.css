@@ -18,20 +18,18 @@ body {
 
 header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
   background-color: rgb(180, 41, 41);
   color: #fff;
-  padding: 20px;
-  text-align: center;
 }
 
 #header-logo-flex {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  margin-left: 70px;
+  justify-content: center;
+  width: 100%;
 }
 
 #header-choice {
@@ -49,15 +47,14 @@ header {
 }
 
 #header-logo {
-  width: 50px;
-  height: 50px;
+  max-width: 60px;
+  margin-right: 20px;
   border-radius: 50%;
 }
 
 #header-title {
   font-size: 30px;
-  margin: 30px;
-  margin-left: 15px;
+  margin: 0;
 }
 
 nav {
@@ -692,7 +689,10 @@ iframe {
 @media screen and (min-width: 768px) {
   /* header */
   #header-logo-flex {
-    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
   }
 
   #header-choice {
@@ -709,9 +709,26 @@ iframe {
     display: block;
   }
 
+  #header-choice > a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    font-size: 18px;
+  }
+
+  #sign-up {
+    min-width: 160px;
+  }
+
   #sign-up {
     margin-left: 0;
     margin-right: 50px;
+  }
+
+  #header-logo {
+    margin-right: 10px;
   }
 
   /* Swiper Sections*/
@@ -1049,10 +1066,10 @@ iframe {
     display: flex;
     justify-content: center;
   }
-  
+
   .audio-iframe {
     border-radius: 12px;
-    max-width: 100px; 
+    max-width: 100px;
   }
 
   .iframe-style {
@@ -1060,27 +1077,56 @@ iframe {
     margin-left: auto;
     margin-right: auto;
     display: block;
+  }
 }
-
-  
-  
-}
-
-
-
-
 
 @media screen and (min-width: 1162px) {
   /* header */
-  #header-title {
-    font-size: 40px;
+  /* header */
+  #header-logo-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
   }
+
   #header-choice {
-    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #header-choice > button,
+  #sign-up,
+  #header-sign-in {
+    margin: 20px;
+    color: white;
+    display: block;
+  }
+
+  #header-choice > a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 110px;
+    font-size: 22px;
   }
 
   #sign-up {
-    margin-right: 0;
+    min-width: 200px;
+  }
+
+  #header-logo {
+    margin-right: 10px;
+  }
+
+  #header-title {
+    font-size: 45px;
+  }
+
+  #header-subscribe {
+    font-size: 22px;
   }
 
   /*Swiper Sections*/
@@ -1428,13 +1474,12 @@ iframe {
   }
 }
 
-
-
 /* anime */
 
 /* Keyframes */
 @keyframes wiggle {
-  0%, 7% {
+  0%,
+  7% {
     transform: rotateZ(0);
   }
   15% {
@@ -1452,7 +1497,8 @@ iframe {
   35% {
     transform: rotateZ(-4deg);
   }
-  40%, 100% {
+  40%,
+  100% {
     transform: rotateZ(0);
   }
 }
