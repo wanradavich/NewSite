@@ -214,9 +214,6 @@ function playVideo(videoUrl, title, description) {
 
 
 
-
-
-
 function playVideo(videoUrl, title, description) {
     var mainVideoIframe = document.querySelector('.main-video iframe');
     var titleElement = document.querySelector('.video-info .info-left .title');
