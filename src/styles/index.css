@@ -513,6 +513,7 @@ article {
   z-index: 1000;
   text-align: center;
   transition: 0.5s;
+  margin-top: 25px;
 }
 li {
   padding: 10px;
